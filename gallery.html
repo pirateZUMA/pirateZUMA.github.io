@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - My Photography Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, 
+                #FFD700 0%, 
+                #FFA500 25%, 
+                #FF4500 50%, 
+                #FF1493 75%, 
+                #9370DB 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+            padding: 20px 40px;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: bold;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 48px;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 5px solid #000;
+            border-radius: 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            border: 3px solid #000;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .category-section {
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            nav {
+                gap: 20px;
+                padding: 20px;
+            }
+
+            nav a {
+                font-size: 24px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .category-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <div class="container">
+        <h1>Full Gallery</h1>
+        
+        <div class="category-section">
+            <h2 class="category-title">Mountain Landscapes</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Mountain reflection">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Mountain peak">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Mountain range">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800" alt="Snowy mountains">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800" alt="Mountain valley">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Alpine lake">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800" alt="Mountain forest">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Mountain sunset">
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">Lakes & Reflections</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Sunset lake">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800" alt="Lake reflection">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=800" alt="Forest lake">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Crystal lake">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800" alt="Misty lake">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Dawn lake">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800" alt="Calm waters">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Lake panorama">
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">Valleys & Meadows</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Green valley">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800" alt="Flower meadow">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800" alt="Rolling hills">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Valley stream">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800" alt="Wildflowers">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800" alt="Alpine meadow">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Scenic valley">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800" alt="Green pastures">
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h2 class="category-title">Sunsets & Sunrises</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Golden sunset">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=800" alt="Purple sunset">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Ocean sunset">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Mountain sunrise">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800" alt="Dawn colors">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Dusk reflection">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=800" alt="Evening sky">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800" alt="Twilight hour">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Photography Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
